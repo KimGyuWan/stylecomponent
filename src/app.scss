@@ -1,0 +1,45 @@
+body,
+body * {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  background-color: lightgrey;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  form {
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+      }
+    }
+    .formdiv {
+      input {
+        line-height: 2;
+
+        &::placeholder {
+          font-size: 0.8rem;
+        }
+
+        &:focus {
+          outline-color: black;
+        }
+      }
+
+      textarea {
+        &::placeholder {
+          font-size: 0.8rem;
+        }
+
+        &:focus {
+          outline-color: aquamarine;
+        }
+      }
+    }
+  }
+}
