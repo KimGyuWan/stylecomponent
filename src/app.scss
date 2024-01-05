@@ -4,13 +4,56 @@ body * {
   padding: 0;
 }
 .App {
-  background-color: lightgrey;
+  width: 800px;
+  margin: 0 auto;
 
   h2 {
     margin-bottom: 2rem;
   }
 
   form {
+    background-color: lightgrey;
+    padding: 2rem;
+
+    .mydiv {
+      min-height: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    // .formlabel {
+    //   position: absolute;
+    //   font-size: 0.8rem;
+    //   right: -40%;
+    //   bottom: 55%;
+    //   transition: 0.5s;
+
+    //   &.on {
+    //     right: 5%;
+    //   }
+    // }
+
+    .formlabel {
+      position: absolute;
+      font-size: 0.8rem;
+      right: -40%;
+      bottom: 55%;
+      transition: 0.5s;
+
+      &.on {
+        right: 5%;
+      }
+      &.notyet {
+        color: black;
+      }
+      &.notext {
+        color: #ff3300;
+      }
+      &.yestext {
+        color: #23b889;
+      }
+    }
+
     ul {
       margin: 0;
       padding: 0;
@@ -18,16 +61,31 @@ body * {
         list-style: none;
       }
     }
-    .formdiv {
-      input {
-        line-height: 2;
 
+    .formdiv {
+      .forminput {
+        box-sizing: border-box;
+        line-height: 2;
         &::placeholder {
           font-size: 0.8rem;
         }
-
-        &:focus {
-          outline-color: black;
+        &.notyet {
+          border: 1px solid black;
+          &:focus {
+            outline-color: black;
+          }
+        }
+        &.notext {
+          border: 1px solid #ff3300;
+          &:focus {
+            outline-color: #ff3300;
+          }
+        }
+        &.yestext {
+          border: 1px solid #23b889;
+          &:focus {
+            outline-color: #23b889;
+          }
         }
       }
 
@@ -40,6 +98,18 @@ body * {
           outline-color: aquamarine;
         }
       }
+    }
+    span {
+      font-size: 12px;
+      color: #f30;
+    }
+
+    i {
+      margin-left: 8px;
+      display: inline-block;
+      padding: 0 0.2rem;
+      border-radius: 50%;
+      color: white;
     }
   }
 }

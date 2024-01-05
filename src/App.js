@@ -8,13 +8,14 @@ function App() {
   return (
     <>
       <div className="App p-5">
-        <TitleCommon>필수정보</TitleCommon>
         <form action="">
+          <TitleCommon>필수정보</TitleCommon>
           <div className="formdiv">
             <ul className="row">
               <li className="col-12">
                 <Inputui
                   inputinfo={{
+                    type: "text",
                     name: "company",
                     labeltext: "회사이름",
                     alerttext: "회사명을 입력해주세요.",
@@ -26,9 +27,10 @@ function App() {
               <li className="col-6">
                 <Inputui
                   inputinfo={{
+                    type: "text",
                     name: "name",
-                    labeltext: "회사이름",
-                    alerttext: "회사명을 입력해주세요.",
+                    labeltext: "담당자 성함",
+                    alerttext: "담당자 성함을 입력해주세요.",
                   }}
                 >
                   담당자 성함 (필수)
@@ -37,9 +39,10 @@ function App() {
               <li className="col-6">
                 <Inputui
                   inputinfo={{
-                    name: "company",
-                    labeltext: "회사이름",
-                    alerttext: "회사명을 입력해주세요.",
+                    type: "text",
+                    name: "manager",
+                    labeltext: "직책",
+                    alerttext: "부서 또는 직책(직함)을 입력해주세요.",
                   }}
                 >
                   직책 (필수)
@@ -48,9 +51,10 @@ function App() {
               <li className="col-6">
                 <Inputui
                   inputinfo={{
-                    name: "company",
-                    labeltext: "회사이름",
-                    alerttext: "회사명을 입력해주세요.",
+                    type: "number",
+                    name: "number",
+                    labeltext: "전화번호",
+                    alerttext: "전화번호를 입력해주세요.",
                   }}
                 >
                   전화번호 (필수)
@@ -59,9 +63,10 @@ function App() {
               <li className="col-6">
                 <Inputui
                   inputinfo={{
-                    name: "company",
-                    labeltext: "회사이름",
-                    alerttext: "회사명을 입력해주세요.",
+                    type: "email",
+                    name: "email",
+                    labeltext: "이메일주소",
+                    alerttext: "이메일주소를 입력해주세요.",
                   }}
                 >
                   이메일 주소 (필수)
